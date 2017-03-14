@@ -1,0 +1,2 @@
+# dockerfile-squid
+HTTP Proxy
