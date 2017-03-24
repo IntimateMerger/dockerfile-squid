@@ -1,6 +1,6 @@
 FROM alpine:3.5
 
-LABEL maintainer "kazuki.matsuda@intimatemerger.com"
+LABEL maintainer "mats116 <mats.kazuki@gmail.com>"
 
 RUN apk add --no-cache acf-squid
 
