@@ -1,5 +1,7 @@
 FROM alpine:3.5
 
+LABEL maintainer "kazuki.matsuda@intimatemerger.com"
+
 RUN apk add --no-cache acf-squid
 
 COPY squid.conf /etc/squid/squid.conf
