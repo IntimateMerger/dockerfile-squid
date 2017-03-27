@@ -15,8 +15,7 @@ jobs:
 
       - run:
           name: Run Image
-          command: |
-            docker run -d -p 3128:3128 -t squid
+          command: docker run -d -p 3128:3128 -t squid
 
       - run:
           name: Test
