@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/workspace
+
+    docker:
+      - image: docker:17.03.0-ce
+
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build Image
+          command: docker build -t squid .
+
+      - run:
+          name: Run Image
+          command: docker run -d -p 3128:3128 -t squid
+
+      - run:
+          name: Test
+          command: docker run --network=host -it appropriate/curl -x localhost:3128 http://example.com
